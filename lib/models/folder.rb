@@ -1,7 +1,7 @@
 class Folder
   attr_reader :name
-  def initialize(atributes = {})
-    @name = atributes[:name]
+  def initialize(attributes = {})
+    @name = attributes[:name]
     @files = []
   end
 end

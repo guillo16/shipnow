@@ -1,11 +1,12 @@
 require_relative "../views/files_view"
 require_relative "../models/file"
+require_relative "../repositories/folder_repository"
 
 class FilesController
-  def initialize(files_repo, folder_repo)
+  def initialize(files_repo, folders_repo)
     @files_repo = files_repo
+    @folders_repo = folders_repo
     @view = FilesView.new
-    @folder_repo = folder_repo
   end
 
   def create_file
@@ -19,7 +20,7 @@ class FilesController
     title = @view.ask_for_title
     content = @view.ask_for_content
     file = File.new(title: title, content: content)
-    persisted_folder = @folder_repo.find_by_name(folder.name)
+    persisted_folder = @folders_repo.find_by_name(folder.name)
     persisted_folder.add_file(file)
     @file_repo.add(file)
   end

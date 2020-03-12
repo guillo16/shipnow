@@ -1,7 +1,10 @@
 require_relative "../models/file"
+require_relative "../models/folder"
+
 class FileRepository
-  def initialize
+  def initialize(folder_repo)
     @files = []
+    @folder_repo = folder_repo
   end
 
   def all

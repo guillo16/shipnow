@@ -6,7 +6,7 @@ class Folder
   end
 
   def add_file(file)
-    @filess << file
+    @files << file
     file.folder = self
   end
 end

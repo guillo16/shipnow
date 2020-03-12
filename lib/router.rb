@@ -44,6 +44,7 @@ class Router
     when 'ls' then @folders_controller.show
     when 'destroy_folder' then @folders_controller.destroy
     when 'j' then @folders_controller.files
+    when 'c' then @files.create_folder_file
     when 'exit' then @running = false
     else
       puts 'try again'

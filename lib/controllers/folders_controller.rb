@@ -25,6 +25,12 @@ class FoldersController
     display_folders
   end
 
+  def files
+    name = @view.ask_for_user_name
+    folder = @folders_repo.find_by_name(name)
+    @view.display_content(folder.files)
+  end
+
   private
 
   def display_folders

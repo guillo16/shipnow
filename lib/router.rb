@@ -40,7 +40,7 @@ class Router
     when 'show_file' then @files_controller.show
     when 'destroy_file' then @files_controller.destroy
     when 'help' then print_menu
-    when 'create_folder' then @folders_controller.create_file
+    when 'create_folder' then @folders_controller.create_folder
     when 'ls' then @folders_controller.show
     when 'destroy_folder' then @folders_controller.destroy
     when 'exit' then @running = false

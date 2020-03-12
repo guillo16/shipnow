@@ -3,9 +3,9 @@ require_relative "../models/file"
 require_relative "../repositories/folder_repository"
 
 class FilesController
-  def initialize(files_repo)
+  def initialize(files_repo, folders_repo)
     @files_repo = files_repo
-
+    @folders_repo = folders_repo
     @view = FilesView.new
   end
 
@@ -16,6 +16,7 @@ class FilesController
     @files_repo.add(file)
   end
 
+  # metodo recientemente creado
   def create_folder_file
     title = @view.ask_for_title
     content = @view.ask_for_content

@@ -6,7 +6,7 @@ class FoldersController
     @view = FoldersView.new
   end
 
-  def create_file
+  def create_folder
     title = @view.ask_for_name
     folder = Folder.new(name: title)
     @folders_repo.add_folder(folder)

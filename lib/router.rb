@@ -57,12 +57,12 @@ class Router
 
   def show_folders
     name = gets.chomp
-    @folders_controller.show_folder(name)
+    @folders_controller.show(name)
   end
 
   def destroy_folders
     name = gets.chomp
-    @folders_controller.destroy_folder(name)
+    @folders_controller.destroy(name)
   end
 
   def route(action)

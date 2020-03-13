@@ -34,15 +34,46 @@ class Router
     print '> '
   end
 
+  def create_files
+    name = gets.chomp
+    title = gets.chomp
+    @files_controller.create_file(name, title)
+  end
+
+  def show_files
+    name = gets.chomp
+    @files_controller.show(name)
+  end
+
+  def destroy_files
+    name = gets.chomp
+    @files_controller.destroy(name)
+  end
+
+  def create_folders
+    name = gets.chomp
+    @folders_controller.create_folder(name)
+  end
+
+  def show_folders
+    name = gets.chomp
+    @folders_controller.show(name)
+  end
+
+  def destroy_folders
+    name = gets.chomp
+    @folders_controller.destroy(name)
+  end
+
   def route(action)
     case action
-    when 'create_file' then @files_controller.create_file
-    when 'show_file' then @files_controller.show
-    when 'destroy_file' then @files_controller.destroy
     when 'help' then print_menu
-    when 'create_folder' then @folders_controller.create_folder
-    when 'ls' then @folders_controller.show
-    when 'destroy_folder' then @folders_controller.destroy
+    when 'create_file' then create_files
+    when 'show_file' then show_files
+    when 'destroy_file' then destroy_files
+    when 'create_folder' then create_folders
+    when 'ls' then show_folders
+    when 'destroy_folder' then destroy_folders
     when 'exit' then @running = false
     else
       puts 'try again'

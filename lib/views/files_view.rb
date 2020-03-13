@@ -17,6 +17,12 @@ class FilesView
     gets.chomp
   end
 
+  def ask_for_file_destroy
+    puts 'Nombre del archivo que quieres destruir:'
+    print '> '
+    gets.chomp
+  end
+
   def display_content(file)
     puts file.content
   end

@@ -12,7 +12,7 @@ class FilesController
 
   def show(name)
     files = @files_repo.find_by_title(name)
-    p files.content unless files.nil?
+    puts files.content unless files.nil?
   end
 
   def destroy(name)

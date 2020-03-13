@@ -11,16 +11,16 @@ class FoldersView
     gets.chomp
   end
 
+  def ask_user_show
+    puts 'nombre de la carpeta que quieres ver'
+    print '> '
+    gets.chomp
+  end
+
   def ask_for_user_name
     puts 'nombre de la carpeta que quieres destruir:'
     print '>> '
     gets.chomp
-  end
-
-  def ask_user_for_index
-    puts 'numero del archivo que quieres destuir?'
-    print '> '
-    gets.chomp.to_i - 1
   end
 
   def display_content(folder)

@@ -26,22 +26,14 @@ class FilesController
   end
 
   def show
-    title = @view.ask_for_user_name
+    title = @view.ask_for_file_name
     files = @files_repo.find_by_title(title)
     @view.display_content(files)
   end
 
   def destroy
-    title = @view.ask_for_user_name
+    title = @view.ask_for_file_destroy
     files = @files_repo.find_by_title(title)
     @files_repo.remove_at(files)
-    display_files
-  end
-
-  private
-
-  def display_files
-    files = @files_repo.all
-    @view.display(files)
   end
 end

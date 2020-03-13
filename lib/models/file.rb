@@ -5,5 +5,3 @@ class File
     @content = attributes[:content]
   end
 end
-
-

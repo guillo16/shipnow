@@ -1,11 +1,6 @@
 class FilesView
-  def display(files)
-    files.each_with_index do |file, index|
-      puts "#{index + 1} - #{file.title}"
-    end
-  end
-
-  def ask_for_user_name
+  def ask_for_file_name
+    puts 'Nombre del archivo:'
     print '>> '
     gets.chomp
   end
@@ -18,6 +13,12 @@ class FilesView
 
   def ask_for_content
     puts 'Contenido del archivo:'
+    print '> '
+    gets.chomp
+  end
+
+  def ask_for_file_destroy
+    puts 'Nombre del archivo que quieres destruir:'
     print '> '
     gets.chomp
   end

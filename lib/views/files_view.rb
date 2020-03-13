@@ -1,5 +1,4 @@
 class FilesView
-
   def ask_for_file_name
     puts 'Nombre del archivo:'
     print '>> '

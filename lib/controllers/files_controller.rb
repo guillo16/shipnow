@@ -1,11 +1,9 @@
 require_relative "../views/files_view"
 require_relative "../models/file"
-require_relative "../repositories/folder_repository"
 
 class FilesController
-  def initialize(files_repo, folders_repo)
+  def initialize(files_repo)
     @files_repo = files_repo
-    @folders_repo = folders_repo
     @view = FilesView.new
   end
 

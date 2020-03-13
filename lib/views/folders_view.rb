@@ -1,10 +1,4 @@
 class FoldersView
-  def display_folder(folders)
-    folders.each_with_index do |folder, index|
-      puts "#{index + 1} - #{folder.name}"
-    end
-  end
-
   def ask_for_name
     puts 'nombre de la carpeta'
     print '> '
@@ -17,10 +11,10 @@ class FoldersView
     gets.chomp
   end
 
-  def ask_user_for_index
-    puts 'numero del archivo que quieres destuir?'
-    print '> '
-    gets.chomp.to_i - 1
+  def ask_user_show
+    puts 'nombre de la carpeta que quieres ver:'
+    print '>> '
+    gets.chomp
   end
 
   def display_content(folder)

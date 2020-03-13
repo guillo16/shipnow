@@ -13,7 +13,7 @@ class FoldersController
   end
 
   def show
-    name = @view.ask_for_user_name
+    name = @view.ask_user_show
     folder = @folders_repo.find_by_name(name)
     @view.display_content(folder)
   end

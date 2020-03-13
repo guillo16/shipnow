@@ -1,10 +1,4 @@
 class FilesView
-  def display(files)
-    files.each_with_index do |file, index|
-      puts "#{index + 1} - #{file.title}"
-    end
-  end
-
   def ask_for_user_name
     print '>> '
     gets.chomp

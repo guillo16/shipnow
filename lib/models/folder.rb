@@ -4,9 +4,4 @@ class Folder
     @name = atributes[:name]
     @files = []
   end
-
-  def add_file(file)
-    @files << file
-    file.folder = self
-  end
 end

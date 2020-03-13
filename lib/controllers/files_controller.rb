@@ -15,7 +15,7 @@ class FilesController
   end
 
   def show
-    title = @view.ask_for_user_name
+    title = @view.ask_for_file_name
     files = @files_repo.find_by_title(title)
     @view.display_content(files)
   end

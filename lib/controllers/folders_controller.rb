@@ -24,13 +24,6 @@ class FoldersController
     @folders_repo.delete_at(folder)
     display_folders
   end
-  # to show the files inside a folder
-
-  def files
-    name = @view.ask_for_user_name
-    folder = @folders_repo.find_by_name(name)
-    @view.display_content(folder.files)
-  end
 
   private
 

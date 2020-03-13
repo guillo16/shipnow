@@ -1,5 +1,4 @@
 require_relative "../models/file"
-require_relative "../models/folder"
 
 class FileRepository
   def initialize
